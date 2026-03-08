@@ -29,6 +29,13 @@ main.addEventListener("scroll", () => {
     lastScroll = currentScroll;
 });
 
+/*
+document.getElementsByTagName("nav").addEventListener("click", function(){
+    setTimeout(function(){
+        header.classList.remove("hide")
+    }, 1000);
+});
+*/
 
 window.addEventListener("resize", () => {
     // Remettre le header visible

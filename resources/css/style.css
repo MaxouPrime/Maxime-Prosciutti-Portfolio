@@ -173,7 +173,7 @@ p{
 }
 
 .carte_competence{
-    background-color: #E9E6DF;
+    background-color: #f5f5f5;
     border-radius: 15px;
     padding: 4%;
     min-width: 35vw;
@@ -199,101 +199,37 @@ h4 {
 
 
 
-
-#form_contacter{
-    width: 25vw;
-    max-width: 600px;
-    height: 50vh;
-
-    background: #E9E6DF;
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    padding: 3vh;
-}
-
-
-#form_contacter label{
-    display: flex;
-    flex-direction: column;
-    font-size: 0.9em;
-    margin-bottom: 3%;
-    height: 25%;
-}
-
-
-#form_contacter input, #form_contacter textarea{
-    margin-top: 2vh;
-    padding: 2vh 1vw;
-    border-radius: 12px;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    
-}
-
-#form_contacter textarea{
-    min-height: 5vh;
-    height: min-content;
-    max-height: 20vh;
-
-    max-width: 100%;
-    min-width: 100%;
-}
-
-
-
-#form_contacter button {
-    width: 100%;
-    height: 15%;
-    padding: 2vh;
-    border-radius: 14px;
-    border: none;
-    background: #CFC9BD ;
-    font-size: 1.1em;
-    font-weight: 600;
-    cursor: pointer;
-    overflow: hidden;  
-    position: relative;
-}
-
-#form_contacter button::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    /* background-color: rgb(170, 170, 170);*/
-    background-color: #D8D3C8;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1; 
-    
-    transition: width 0.3s ease, height 0.3s ease;
-}
-
-
-#form_contacter button:hover::before {
-    width: 300%;  
-    height: 300%;
-    transition: width 0.8s ease, height 0.8s ease; 
-}
-
-#form_contacter button:hover{
-    transform: scale(1.05);
-    transition-duration: 0.7s;
-}
-
 #contact_contenu{
     display: flex;
     align-items: start;
     justify-content: space-around; 
     height: min-content;
+    margin-top: 10vh;
 }
 
 #texte_contact{
     width: 35vw;
+}
+
+
+#vignette_contact{
+    height: 30vh;
+    width: min-content;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#vignette_apropos{
+    width: 80vw;
+    margin: auto;
+}
+
+#vignette_apropos, #vignette_contact{
+    background-color: #f5f5f5;
+    padding: 25px;
+    border-radius: 15px;
 }
 
 
@@ -350,72 +286,78 @@ h4 {
 }
 
 .contenu_item_carrousel{
-    display: inline-flex;
+    display: flex;
     text-align: start;
     justify-content: space-around;
+    height: 80%;
+    padding: 10px;
 }
 
-.contenu_item_carrousel p{
-    width: 30%;
+.text_contenu_item_carrousel{
+    width: 40%;
 }
-.contenu_item_carrousel ul{
-    width: 30%;
+
+.text_contenu_item_carrousel p{
+    font-size: 2vh;
 }
+
+.text_contenu_item_carrousel ul{
+    font-size: 2vh;
+    margin-bottom: 10px;
+}
+
 
 .contenu_item_carrousel img{
-    width: 30%;
     height: max-content;
+    max-height: 80%;
+    width: max-content%;
+    max-width: 40%;
 }
 
 
 
 
-.timeline-horizontal {
-    padding: 60px 20px;
-    overflow-x: auto;
-}
+/*
+================================
+PARCOURS
+================================
+*/
 
-.timeline-track {
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-    gap: 10vw;
-    padding-top: 40px;
-}
 
-/* ligne */
-.timeline-track::before {
-    content: "";
-    position: absolute;
-    top: 4vh;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: #ddd;
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .timeline-item {
-    position: relative;
-    min-width: 20vw;
-    text-align: center;
+  padding: 20px 0 20px 50px; /* Espace pour la ligne */
+  position: relative;
 }
 
-.timeline-point {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 14px;
-    height: 14px;
-    background: #000;
-    border-radius: 50%;
-    z-index: 1;
+.timeline-date {
+  font-weight: bold;
+  color: #716A60;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
 }
 
 .timeline-content {
-    margin-top: 4vh;
-    background: #CFC9BD;
-    padding: 15px;
-    border-radius: 10px;
+  background: #f5f5f5;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.timeline-content h3 {
+  margin: 0 0 10px 0;
+  color: #716A60;
+}
+
+.timeline-content p {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
 }
 
 
