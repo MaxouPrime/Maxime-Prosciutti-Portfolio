@@ -1,0 +1,367 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    font-family: 'Lexend', sans-serif;
+
+}
+
+body{
+    background-color: #E9E6DF;
+}
+
+
+header{
+    /* background-color: rgb(163, 163, 163); */
+    background-color: #CFC9BD;
+    height: 8vh;
+    position: fixed;
+    top: 0;
+    min-height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+
+header.hide {
+    transform: translateY(-100%);
+}
+
+nav{
+    width: 50vw;
+    min-width: 575px;
+    height: 100%;
+    display: flex;
+}
+
+nav a {
+    flex: 1;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    white-space: nowrap;
+    border-radius: 5%;
+
+    position: relative;
+    overflow: hidden;  
+    
+    color: #716A60;
+}
+
+/* On crée un élément circulaire au dessus du bouton
+   mais en dessous du texte pour que lorsque la souris
+   passe sur le bouton on ai un changement de couleur
+   circulaire du centre vers l'extérieur */
+
+nav a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    /* background-color: rgb(170, 170, 170);*/
+    background-color: #D8D3C8;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+    z-index: -1; 
+}
+
+
+nav a:hover::before {
+    width: 300%;  
+    height: 300%;
+    transition: width 0.8s ease, height 0.8s ease; 
+}
+
+nav a:hover{
+    transform: scale(1.05);
+    transition-duration: 0.7s;
+}
+
+
+
+main{
+    overflow-y: scroll;
+    /*scroll-snap-type: y mandatory; 
+    scroll-behavior: smooth;*/
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+main>:nth-child(odd){
+    background-color: #E9E6DF;
+}
+
+main>:nth-child(even){
+    background-color: #DCD7CE;
+}
+
+article {
+    height: 100vh;
+    padding-top: 8vh;
+    /*scroll-behavior: smooth;
+    scroll-snap-align: start;*/
+}
+
+.contenu_article{
+    height: 100%;
+    width: 100%;
+    padding: 3vh 3vw;
+}
+
+
+h1{
+    font-size: 6vw;
+    font-weight: 900;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    color: #716A60;
+}
+
+h3{
+    font-size: 2.5vw;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    color: #716A60;
+}
+
+
+
+h2{
+    font-size: 5vh;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    margin-bottom: 4vh;
+    color: #716A60;
+}
+
+p{
+    font-size: 2.5vh;
+    /* text-shadow: 2px 2px 5px rgba(0,0,0,0.3); */
+    margin-bottom: 3vh;
+    color: #716A60;
+}
+
+
+#contenu_accueil{
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeIn 1.5s forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#contenu_competence{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vh;
+}
+
+.carte_competence{
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    padding: 4%;
+    min-width: 35vw;
+    width: min-content;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+
+    transition-duration: 0.6s;
+}
+
+.carte_competence:hover{
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition-duration: 0.7s;
+}
+
+h4 {
+    margin-bottom: 2vh;
+}
+
+.carte_competence ul{
+    font-size: 2vh;
+}
+
+
+
+#contact_contenu{
+    display: flex;
+    align-items: start;
+    justify-content: space-around; 
+    height: min-content;
+    margin-top: 10vh;
+}
+
+#texte_contact{
+    width: 35vw;
+}
+
+
+#vignette_contact{
+    height: 30vh;
+    width: min-content;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#vignette_apropos{
+    width: 80vw;
+    margin: auto;
+}
+
+#vignette_apropos, #vignette_contact{
+    background-color: #f5f5f5;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+
+
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.carousel-viewport {
+    width: 80vw;
+    height: 60vh;
+    overflow: hidden;
+    align-items: center;
+
+}
+
+.carousel-track {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.carousel-btn {
+    background: #000;
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-btn:hover {
+    background: #444;
+}
+
+.carousel-item h3{
+    margin-bottom: 2vh;
+}
+
+.contenu_item_carrousel{
+    display: flex;
+    text-align: start;
+    justify-content: space-around;
+    height: 80%;
+    padding: 10px;
+}
+
+.text_contenu_item_carrousel{
+    width: 40%;
+}
+
+.text_contenu_item_carrousel p{
+    font-size: 2vh;
+}
+
+.text_contenu_item_carrousel ul{
+    font-size: 2vh;
+    margin-bottom: 10px;
+}
+
+
+.contenu_item_carrousel img{
+    height: max-content;
+    max-height: 80%;
+    width: max-content%;
+    max-width: 40%;
+}
+
+
+
+
+/*
+================================
+PARCOURS
+================================
+*/
+
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  padding: 20px 0 20px 50px; /* Espace pour la ligne */
+  position: relative;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: #716A60;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.timeline-content {
+  background: #f5f5f5;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.timeline-content h3 {
+  margin: 0 0 10px 0;
+  color: #716A60;
+}
+
+.timeline-content p {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+
+
+
+
+
