@@ -1,291 +1,165 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="resources/css/style.css">
-    <script src="resources/script/script.js" defer></script>
-    <title>Portfolio</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maxime Prosciutti – Portfolio</title>
+<meta name="description" content="Portfolio de Maxime Prosciutti, étudiant en BUT Informatique à l’IUT de Montpellier-Sète : réseaux, systèmes et cybersécurité.">
+<meta name="theme-color" content="#F0F1E7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%2346594A'/%3E%3Cpath d='M9 23c0-9 6-14 14-14 0 8-5 14-14 14z' fill='%23DCE3D3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js','loading')</script>
+<link rel="stylesheet" href="resources/css/style.css">
+<script src="resources/script/script.js" defer></script>
+<noscript><style>#loader{display:none}.js .reveal,.js .hero-in{opacity:1!important;transform:none!important}html.loading{overflow:auto}</style></noscript>
 </head>
-
 <body>
 
-    <header>
-        <nav>
-            <a href="#apropos">À propos</a>
-            <a href="#parcours">Mon parcours</a>
-            <a href="#competences">Comptences</a>
-            <a href="#projets">Projets</a>
-            <a href="#contact">Me contacter</a>
+<div id="loader" role="dialog" aria-modal="true" aria-label="Moment de pause avant l’ouverture du portfolio">
+  <div class="breath" aria-hidden="true"><i class="ring"></i><i class="orb"></i></div>
+  <p id="loaderTitle" class="loader-title" aria-live="polite">Installez-vous confortablement</p>
+  <p id="loaderSub" class="loader-sub">Redressez doucement le dos, laissez retomber vos épaules.</p>
+  <button id="skip" type="button">Passer</button>
+</div>
 
-        </nav>
-    </header>
+<a class="skip-link" href="#apropos">Aller au contenu</a>
 
-    <main>
+<header class="site-header">
+  <a class="brand" href="#accueil">Maxime Prosciutti</a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu"><span></span><span></span></button>
+  <nav id="nav" aria-label="Navigation principale">
+    <a href="#apropos">À propos</a>
+    <a href="#parcours">Mon parcours</a>
+    <a href="#competences">Compétences</a>
+    <a href="#projets">Projets</a>
+    <a href="#contact">Me contacter</a>
+  </nav>
+</header>
 
-        <article id="accueil">
+<main>
+<section id="accueil" class="hero" tabindex="-1">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="resources/vid/champsble_video.mp4" type="video/mp4"></video>
+  <div class="hero-veil"></div>
+  <div class="hero-text">
+    <h1><span class="hero-in" style="--i:0">Bienvenue</span><span class="hero-sub hero-in" style="--i:1">sur le portfolio de Maxime PROSCIUTTI</span></h1>
+    <p class="hero-in" style="--i:2">Étudiant en BUT Informatique, tourné vers les réseaux, les systèmes et la cybersécurité.</p>
+    <div class="hero-cta hero-in" style="--i:3"><a class="btn" href="#apropos">Faire connaissance</a><a class="btn btn-ghost" href="#projets">Voir mes projets</a></div>
+  </div>
+</section>
 
-            <div class="contenu_article" id="contenu_accueil">
-                <h1>Bienvenue</h1>
-                <h3>sur le portfolio de Maxime PROSCIUTTI</h3>
+<section id="apropos" class="sec">
+  <div class="wrap about">
+    <div class="portrait reveal" role="img" aria-label="Emplacement de la photo de Maxime">
+      <!-- À COMPLÉTER : remplacer ce monogramme par <img src="resources/img/photo.jpg" alt="Portrait de Maxime Prosciutti"> -->
+      <span>MP</span>
+    </div>
+    <div class="reveal">
+      <h2>À propos</h2>
+      <p>Avant tout, je me présente, je m’appelle Maxime j’ai actuellement 19 ans et je suis étudiant à l’IUT de Montpellier-Sète.</p>
+      <p>J’ai eu la chance de grandir avec l’informatique et j’ai directement accroché à cet univers devant ma première console et mon premier jeu. Mais c’est en seconde que j’ai vraiment pu découvrir le développement informatique et que j’ai décidé de poursuivre mes études dans ce domaine.</p>
+      <p>Après l’obtention de mon Baccalauréat spécialité Mathématiques et Informatique j’ai intégré l’IUT de Montpellier-Sète en Informatique et en découvrant le vaste univers de l’informatique je me suis finalement rattaché au domaine du réseau, des systèmes et de la cybersécurité.</p>
+    </div>
+  </div>
+</section>
 
-            </div>
+<section id="parcours" class="sec sec-sand">
+  <div class="wrap narrow">
+    <h2 class="reveal">Parcours</h2>
+    <ol class="timeline">
+      <li class="reveal"><time>2024 - Présent</time><div class="card"><h3>BUT - Informatique</h3><p>BUT Informatique à l’IUT de Montpellier-Sète</p></div></li>
+      <li class="reveal"><time>2021 - 2024</time><div class="card"><h3>Baccalauréat Général</h3><p>Baccalauréat Général spécialité Mathématiques et NSI (Numérique et Science de l’Informatique) Mention Bien</p></div></li>
+      <!-- À COMPLÉTER : stages, jobs, associations, certifications (Cisco, ANSSI SecNumacadémie…) -->
+    </ol>
+  </div>
+</section>
 
+<section id="competences" class="sec">
+  <div class="wrap">
+    <h2 class="reveal">Compétences</h2>
+    <div class="skills">
+      <div class="card s7 reveal"><h4>Compétences Techniques</h4><ul class="chips"><li>Java</li><li>SQL</li><li>Python</li><li>HTML/CSS</li><li>PHP</li><li>JavaScript</li><li>C</li></ul></div>
+      <div class="card s5 reveal"><h4>Outils</h4><ul class="chips"><li>Git</li><li>Figma</li><li>Google Docs</li><li>Excel</li><li>Visual Studio Code</li><li>IntelliJ</li><li>PhpStorm</li></ul></div>
+      <div class="card s5 reveal"><h4>Compétences Linguistiques</h4>
+        <ul class="langs">
+          <li><span>Français</span><b>Natif</b><i style="--l:100%"></i></li>
+          <li><span>Anglais</span><b>B2</b><i style="--l:66%"></i></li>
+          <li><span>Espagnol</span><b>B1</b><i style="--l:50%"></i></li>
+        </ul></div>
+      <div class="card s7 reveal"><h4>Compétences Générales</h4><ul class="chips"><li>Autonomie</li><li>Esprit d’équipe</li><li>Capacité d’organisation</li><li>Communication</li></ul></div>
+    </div>
+  </div>
+</section>
 
+<section id="projets" class="sec sec-sage">
+  <div class="wrap">
+    <h2 class="reveal">Projets</h2>
+    <div class="carousel reveal" aria-roledescription="carrousel" aria-label="Projets">
+      <div class="viewport"><div class="track">
 
+        <article class="slide" aria-label="Projet 1 sur 3">
+          <div class="slide-text">
+            <h3>Application d’enchère sécurisée</h3>
+            <ul class="meta"><li>Durée : 5 mois</li><li>En équipe de 5</li><li>Académique</li></ul>
+            <p class="lead">Développer une application d’enchères sécurisée avec une création de compte, une authentification par mail, une structure client/serveur.</p>
+            <p>Ce projet est un projet développé en Java dans lequel nous avons implémenté un système de connexion avec une authentification par mail. L’application sécurise les informations sensibles comme le mot de passe en le hashant. Certaines données sont cryptées comme le montant de l’enchère. Le front-end de l’application est en JavaFx et la structure de l’application est un modèle MVC (Modèle, Vue, Contrôleur).</p>
+            <ul class="chips small"><li>Java</li><li>JavaFX</li><li>MVC</li></ul>
+          </div>
+          <figure class="shot"><img src="resources/img/applicationSecurise.png" alt="Image du projet d’application" width="1920" height="1080" loading="lazy"></figure>
+          <!-- À COMPLÉTER : lien du dépôt / démo -->
         </article>
 
-
-        <article id="apropos">
-
-            <div class="contenu_article" id="contenu_apropos">
-                <h2>À propos</h2>
-                <div id="vignette_apropos" class="texte_contenu">
-                    <p>
-                        Avant tout, je me présente, je m’appelle Maxime j’ai actuellement 19 ans et je suis étudiant à
-                        l’IUT de Montpellier-Sète.
-                    </p>
-                    <p>
-                        J’ai eu la chance de grandir avec l’informatique et j’ai directement accroché à cet univers
-                        devant ma première console et mon premier jeu. Mais c’est en seconde que j’ai vraiment pu
-                        découvrir le développement informatique et que j’ai décidé de poursuivre mes études dans ce
-                        domaine.
-                    </p>
-                    <p>
-                        Après l’obtention de mon Baccalauréat spécialité Mathématiques et Informatique j’ai intégré
-                        l’IUT de Montpellier-Sète en Informatique et en découvrant le vaste univers de l’informatique je
-                        me suis finalement rattaché au domaine du réseau, des systèmes et de la cybersécurité.
-                    </p>
-                </div>
-
-
-                <!-- Ajouter image/vidéo -->
-
-            </div>
-
+        <article class="slide" aria-label="Projet 2 sur 3">
+          <div class="slide-text">
+            <h3>Site web de vente e-commerce</h3>
+            <ul class="meta"><li>Durée : 2 mois</li><li>En équipe de 3</li><li>Académique</li></ul>
+            <p class="lead">Développer un site de ventes e-commerce en PHP.</p>
+            <p>Ce projet est un site web de vente e-commerce dans lequel nous avons fait le choix de vendre des montres. Il est possible de se connecter à un compte avec un mot de passe qui est hashé afin d’assurer la sécurité. Il est possible d’ajouter des montres à son panier, de supprimer des produits de son panier, de passer commande. Le site dispose également un espace admin pour permettre aux administrateurs d’avoir la main sur l’entièreté du site.</p>
+            <ul class="chips small"><li>PHP</li></ul>
+          </div>
+          <figure class="shot"><img src="resources/img/siteWeb.png" alt="Image du site web de vente e-commerce" width="1855" height="933" loading="lazy"></figure>
         </article>
 
-        <article id="parcours">
-            <div class="contenu_article">
-                <h2>Parcours</h2>
-
-                <div class="timeline">
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">2024 - Présent</div>
-                        <div class="timeline-content">
-                            <h3>BUT - Informatique</h3>
-                            <p>BUT Informatique à l'IUT de Montpellier-Sète</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">2021 - 2024</div>
-                        <div class="timeline-content">
-                            <h3>Baccalauréat Générale</h3>
-                            <p>Baccalauréat Générale spécialité Mathématiques et NSI (Numérique et Science de
-                                l'Informatique) Mention Bien</p>
-                        </div>
-                    </div>
-
-                </div>
-
-
-            </div>
-
+        <article class="slide" aria-label="Projet 3 sur 3">
+          <div class="slide-text">
+            <h3>Jeu Pokémon TCG</h3>
+            <ul class="meta"><li>Durée : 3 mois</li><li>En équipe de 2</li><li>Académique</li></ul>
+            <p class="lead">Développer le jeu Pokémon TCG en Java/JavaFX.</p>
+            <p>Ce projet s’est déroulé en 2 parties, la première concernant le développement back-end de l’application, les interactions et le déroulement du jeu. Le jeu était développé en Java et devait valider une liste de tests secrète qui aboutissait à notre note (18/20). Dans la deuxième partie de ce projet il fallait réaliser le front-end de notre jeu en JavaFX afin de rendre le jeu jouable et interactif.</p>
+            <ul class="chips small"><li>Java</li><li>JavaFX</li></ul>
+          </div>
+          <figure class="shot portrait"><img src="resources/img/jeuPokemonTCG.jpeg" alt="Image du jeu Pokémon TCG développé" width="659" height="1060" loading="lazy"></figure>
         </article>
+      </div></div>
+      <div class="controls">
+        <button class="round prev" aria-label="Projet précédent">❮</button>
+        <div class="dots" role="tablist" aria-label="Choisir un projet"></div>
+        <button class="round next" aria-label="Projet suivant">❯</button>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <article id="competences">
-            <div class="contenu_article">
-                <h2>Compétences</h2>
-                <div id="contenu_competence">
-                    <div class="carte_competence">
-                        <h4>Compétences Techniques</h4>
-                        <ul>
-                            <li>Java</li>
-                            <li>SQL</li>
-                            <li>Python</li>
-                            <li>HTML/CSS</li>
-                            <li>PHP</li>
-                            <li>JavaScript</li>
-                            <li>C</li>
-                        </ul>
-                    </div>
+<section id="contact" class="sec sec-end">
+  <div class="wrap contact">
+    <div class="reveal">
+      <h2>Me contacter</h2>
+      <p class="thanks">Merci beaucoup pour le temps que vous avez accordé à mon portfolio</p>
+    </div>
+    <div class="card reveal">
+      <a class="line" href="mailto:maximeprosciutti22@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 8 8 6 8-6"/></svg>maximeprosciutti22@gmail.com</a>
+      <button id="copy" class="btn btn-ghost" type="button">Copier l’adresse</button>
+      <a class="line" href="https://www.linkedin.com/in/maxime-prosciutti-08a4a1340/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 11v5M8 8v.01M12 16v-5m0 2c0-1.5 1-2 2-2s2 .7 2 2v3"/></svg>LinkedIn : Maxime Prosciutti</a>
+      <!-- À COMPLÉTER : GitHub, CV (<a class="btn" href="resources/CV.pdf" download>Télécharger mon CV</a>) -->
+    </div>
+  </div>
+</section>
+</main>
 
-                    <div class="carte_competence">
-                        <h4>Outils</h4>
-                        <ul>
-                            <li>Git</li>
-                            <li>Figma</li>
-                            <li>Google Docs</li>
-                            <li>Excel</li>
-                            <li>Visual Studio Code</li>
-                            <li>IntelliJ</li>
-                            <li>PhpStorm</li>
-                        </ul>
-                    </div>
-
-                    <div class="carte_competence">
-                        <h4>Compétences Linguistiques</h4>
-                        <ul>
-                            <li>Français : Natif</li>
-                            <li>Anglais : B2</li>
-                            <li>Espagnol : B1</li>
-                        </ul>
-                    </div>
-
-                    <div class="carte_competence">
-                        <h4>Compétences Générales</h4>
-                        <ul>
-                            <li>Autonomie</li>
-                            <li>Esprit d'équipe</li>
-                            <li>Capacité d'organisation</li>
-                            <li>Communication</li>
-                        </ul>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </article>
-
-        <article id="projets">
-            <div class="contenu_article">
-                <h2>Projets</h2>
-
-                <div class="carousel">
-                    <button class="carousel-btn prev">❮</button>
-
-                    <div class="carousel-viewport">
-                        <div class="carousel-track">
-                            <!-- Projet 1 -->
-                            <div class="carousel-item">
-                                <h3>Application d’enchère sécurisée</h3>
-                                <div class="contenu_item_carrousel">
-                                    <div class="text_contenu_item_carrousel">
-                                        <ul>
-                                            <li>Durée : 5 mois</li>
-                                            <li>En équipe de 5</li>
-                                            <li>Académique</li>
-                                            <li>Développer une application d'enchères sécurisée avec une création de
-                                                compte,
-                                                une authentification par mail, une structure client/serveur.</li>
-                                        </ul>
-                                        <p>
-                                            Ce projet est un projet développé en Java dans lequel nous avons implémenté
-                                            un
-                                            système de connexion avec une authentification par mail. L’application
-                                            sécurise
-                                            les informations sensibles comme le mot de passe en le hashant. Certaines
-                                            données sont cryptées comme le montant de l’enchère. Le front-end de
-                                            l’application est en JavaFx et la structure de l’application est un modèle
-                                            MVC
-                                            (Modèle, Vue, Contrôleur).
-                                        </p>
-                                    </div>
-                                    <img src="resources/img/applicationSecurise.png" alt="Image du projet d'application">
-                                </div>
-
-                            </div>
-
-                            <!-- Projet 2 -->
-                            <div class="carousel-item">
-                                <h3>Site web de vente e-commerce</h3>
-                                <div class="contenu_item_carrousel">
-                                    <div class="text_contenu_item_carrousel">
-                                        <ul>
-                                            <li>Durée : 2 mois</li>
-                                            <li>En équipe de 3</li>
-                                            <li>Académique</li>
-                                            <li>Développer un site de ventes e-commerce en php</li>
-                                        </ul>
-                                        <p>Ce projet est un site web de vente e-commerce dans lequel nous avons fait le
-                                            choix de vendre des montres. Il est possible de se connecter à un compte
-                                            avec un
-                                            mot de passe qui est hashé afin d’assurer la sécurité. Il est possible
-                                            d’ajouter
-                                            des montres à son panier, de supprimer des produits de son panier, de passer
-                                            commande. Le site dispose également un espace admin pour permettre aux
-                                            administrateurs d’avoir la main sur l'entièreté du site.
-                                        </p>
-                                    </div>
-
-                                    <img src="resources/img/siteWeb.png" alt="Image du site web de vente e-commerce">
-                                </div>
-
-                            </div>
-
-                            <!-- Projet 3 -->
-                            <div class="carousel-item">
-                                <h3>Jeu Pokémon TCG</h3>
-                                <div class="contenu_item_carrousel">
-                                    <div class="text_contenu_item_carrousel">
-                                        <ul>
-                                            <li>Durée : 3 mois</li>
-                                            <li>En équipe de 2</li>
-                                            <li>Académique</li>
-                                            <li>Développer le jeu pokémon TCG En Java/ JavaFx</li>
-                                        </ul>
-                                        <p>Ce projet s’est déroulé en 2 parties, la première concernant le développement
-                                            back-end de l’application, les intéractions et le déroulement du jeu. Le jeu
-                                            était développé en Java et devait valider une liste de tests secrète qui
-                                            aboutissait à notre note (18/20). Dans la deuxième partie de ce projet il
-                                            fallait réaliser le front-end de notre jeu en JavaFX afin de rendre le jeu
-                                            jouable et intéractif.</p>
-                                    </div>
-
-                                    <img src="resources/img/jeuPokemonTCG.jpeg" alt="Image du jeu pokemon TCG développé">
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="carousel-btn next">❯</button>
-                </div>
-
-                <!-- image ou vidéo -->
-
-                <!-- paragraphe -->
-
-            </div>
-
-        </article>
-
-        <article id="contacter">
-            <div class="contenu_article">
-                <h2>Me contacter</h2>
-                <div id="contact_contenu">
-                    <div id="vignette_contact">
-                        <p>maximeprosciutti22@gmail.com</p>
-                        <p>LinkedIn : <a href="https://www.linkedin.com/in/maxime-prosciutti-08a4a1340/">Maxime Prosciutti</a></p>
-                    </div>
-
-                    <div class="texte_contenu" id="texte_contact">
-                        <h3>
-                            Merci beaucoup pour le temps que vous avez accordé à mon portfolio
-                        </h3>
-                    </div>
-                </div>
-
-
-            </div>
-
-        </article>
-
-    </main>
-
-    <footer>
-        <!-- Copyright -->
-
-    </footer>
-
+<footer>
+  <p>© 2026 Maxime Prosciutti</p>
+  <a href="#accueil">Retour en haut</a>
+</footer>
 </body>
-
 </html>
